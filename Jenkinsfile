@@ -19,8 +19,8 @@ pipeline {
         stage('Push to Docker Hub') {
             steps {
                 withDockerRegistry([credentialsId: 'docker-hub-credentials', url: '']) {
-                    sh 'docker tag my-sample-app Saranya/my-sample-app:latest'
-                    sh 'docker push Saranya/my-sample-app:latest'
+                    sh 'docker tag my-sample-app saranya275/my-sample-app:latest'
+                    sh 'docker push saranya275/my-sample-app:latest'
                 }
             }
         }
