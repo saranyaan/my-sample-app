@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/saranyaan/my-sample-app.git'
+                git branch: 'main',
+                    git 'https://github.com/saranyaan/my-sample-app.git'
             }
         }
         stage('Build') {
