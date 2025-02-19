@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-username/my-sample-app.git'
+                git 'https://github.com/saranyaan/my-sample-app.git'
             }
         }
         stage('Build') {
@@ -19,8 +19,8 @@ pipeline {
         stage('Push to Docker Hub') {
             steps {
                 withDockerRegistry([credentialsId: 'docker-hub-credentials', url: '']) {
-                    sh 'docker tag my-sample-app your-dockerhub-username/my-sample-app:latest'
-                    sh 'docker push your-dockerhub-username/my-sample-app:latest'
+                    sh 'docker tag my-sample-app Saranya/my-sample-app:latest'
+                    sh 'docker push Saranya/my-sample-app:latest'
                 }
             }
         }
