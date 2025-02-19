@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/your-username/my-sample-app.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'docker build -t my-sample-app .'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'echo "Running tests..."'
+            }
+        }
+        stage('Push to Docker Hub') {
+            steps {
+                withDockerRegistry([credentialsId: 'docker-hub-credentials', url: '']) {
+                    sh 'docker tag my-sample-app your-dockerhub-username/my-sample-app:latest'
+                    sh 'docker push your-dockerhub-username/my-sample-app:latest'
+                }
+            }
+        }
+    }
+}
