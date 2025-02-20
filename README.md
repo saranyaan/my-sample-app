@@ -8,6 +8,7 @@ This project demonstrates a CI/CD pipeline for a Python application using Jenkin
 + Trigger Jenkins build automatically using GitHub Webhooks
 + Containerize the Python application using Docker
 + Push the Docker image to Docker Hub
+  
 ✅ Continuous Deployment (CD):
 
 + Deploy the containerized application to a Kubernetes cluster (Minikube)
