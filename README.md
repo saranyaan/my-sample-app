@@ -2,9 +2,10 @@
 
 **Overview**
 This project demonstrates a CI/CD pipeline for a Python application using Jenkins, Docker, and Kubernetes deployed on an AWS EC2 instance.
+
 ✅ Continuous Integration (CI):
 
-++Trigger Jenkins build automatically using GitHub Webhooks
++ Trigger Jenkins build automatically using GitHub Webhooks
 ++ Containerize the Python application using Docker
 ++ Push the Docker image to Docker Hub
 ✅ Continuous Deployment (CD):
