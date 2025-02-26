@@ -13,6 +13,7 @@ This project demonstrates a CI/CD pipeline for a Python application using Jenkin
 
 + Deploy the containerized application to a Kubernetes cluster (Minikube)
 + Expose the application using NodePort for external access
++ 
 **Tech Stack**
 + AWS EC2 Instance (Ubuntu) – Hosts Jenkins & Docker
 + Jenkins – Automates the CI/CD pipeline
